@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jim@saturnflyer.com"]
   spec.summary       = %q{Add and remove behaviors to individual objects}
   spec.description   = %q{Add and remove behaviors to individual objects}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/saturnflyer/behavioral"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
