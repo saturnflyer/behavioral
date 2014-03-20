@@ -1,5 +1,10 @@
 # Behavioral
 
+[![Build Status](https://travis-ci.org/saturnflyer/behavioral.png?branch=master)](https://travis-ci.org/saturnflyer/behavioral)
+[![Code Climate](https://codeclimate.com/github/saturnflyer/behavioral.png)](https://codeclimate.com/github/saturnflyer/behavioral)
+[![Coverage Status](https://coveralls.io/repos/saturnflyer/behavioral/badge.png)](https://coveralls.io/r/saturnflyer/behavioral)
+[![Gem Version](https://badge.fury.io/rb/behavioral.png)](http://badge.fury.io/rb/behavioral)
+
 Add behavior to individual objects and remove it later _while preserving the existing behavior_.
 
 This is _similar_ to [Casting](http://rubygems.org/gems/casting) in that it adds and removes behaviors and preserves `self` but it's different in that you can still use `super` inside your methods.
