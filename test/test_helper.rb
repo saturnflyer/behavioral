@@ -1,12 +1,7 @@
 require 'simplecov'
+require 'minitest/autorun'
+require 'behavioral'
+
 SimpleCov.start do
   add_filter 'test'
 end
-
-require 'coveralls'
-if ENV['COVERALLS']
-  Coveralls.wear!
-end
-
-require 'minitest/autorun'
-require 'behavioral'

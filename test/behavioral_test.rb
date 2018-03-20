@@ -6,7 +6,7 @@ describe Behavioral do
     person.with_behaviors(Greeter)
     assert_equal "Hello, I am The Greeter Jim", person.hello
   end
-  
+
   it 'removes behaviors leaving the previously-existing methods intact' do
     person = Person.new('Jim')
     person.with_behaviors(Greeter)
@@ -45,7 +45,7 @@ module Greeter
   def hello
     "Hello, I am #{self.name}"
   end
-  
+
   def name
     "The Greeter #{super}"
   end
