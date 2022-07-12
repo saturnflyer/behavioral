@@ -47,6 +47,12 @@ describe Behavioral do
     end
     assert_match "undefined method `hello'", err.message
   end
+
+  it 'handles super with arguments' do
+    person = Person.new('Jim')
+    person.with_behaviors(Greeter)
+    assert_equal "method_with_argument + it works", person.method_with_argument("it works")
+  end
 end
 
 
@@ -56,6 +62,10 @@ class Person
   end
   attr_reader :name
   include Behavioral
+
+  def method_with_argument(arg)
+    arg
+  end
 end
 
 module Greeter
@@ -65,6 +75,10 @@ module Greeter
 
   def name
     "The Greeter #{super}"
+  end
+
+  def method_with_argument(arg)
+    "method_with_argument + #{super}"
   end
 end
 
