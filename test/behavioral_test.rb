@@ -30,7 +30,7 @@ describe Behavioral do
     person = Person.new('Jim')
     person.with_behaviors(Greeter, Admin)
     assert_equal "Hello, I am The Greeter Jim", person.hello
-    assert person.admin?
+    assert_predicate person, :admin?
   end
   
   it 'overwrites singleton methods from subsequent behaviors' do
@@ -70,7 +70,7 @@ end
 
 module Greeter
   def hello
-    "Hello, I am #{self.name}"
+    "Hello, I am #{name}"
   end
 
   def name
@@ -90,6 +90,6 @@ end
 
 module OtherGreeter
   def hello
-    "Hi. Call me #{self.name}"
+    "Hi. Call me #{name}"
   end
 end
