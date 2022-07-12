@@ -38,6 +38,15 @@ describe Behavioral do
     person.with_behaviors(Greeter, OtherGreeter)
     assert_equal "Hi. Call me The Greeter Jim", person.hello
   end
+
+  it 'ignores unknown methods when removing behaviors' do
+    person = Person.new('Jim')
+    person.without_behaviors(Greeter)
+    err = assert_raises NoMethodError do
+      person.hello
+    end
+    assert_match "undefined method `hello'", err.message
+  end
 end
 
 

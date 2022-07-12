@@ -15,7 +15,7 @@ module Behavioral
   def without_behaviors(*mods)
     Array(mods).each do |mod|
       mod.instance_methods.each do |meth|
-        singleton_class.send(:remove_method, meth)
+        singleton_class.send(:remove_method, meth) if singleton_methods.include?(meth)
       end
     end
     self
