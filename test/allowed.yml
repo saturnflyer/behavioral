@@ -1,0 +1,8 @@
+---
+- Behavioral#test_0001_gains behaviors and overrides existing methods
+- Behavioral#test_0002_removes behaviors leaving the previously-existing methods intact
+- Behavioral#test_0003_reverts added behaviors
+- Behavioral#test_0004_allows adding multiple behavior modules at once
+- Behavioral#test_0005_overwrites singleton methods from subsequent behaviors
+- Behavioral#test_0006_ignores unknown methods when removing behaviors
+- Behavioral#test_0007_handles super with arguments
