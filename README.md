@@ -2,7 +2,6 @@
 
 [![Build Status](https://github.com/saturnflyer/behavioral/actions/workflows/test.yml/badge.svg)](https://github.com/saturnflyer/behavioral/actions)
 [![Code Climate](https://codeclimate.com/github/saturnflyer/behavioral.png)](https://codeclimate.com/github/saturnflyer/behavioral)
-[![Coverage Status](https://coveralls.io/repos/saturnflyer/behavioral/badge.png)](https://coveralls.io/r/saturnflyer/behavioral)
 [![Gem Version](https://badge.fury.io/rb/behavioral.png)](http://badge.fury.io/rb/behavioral)
 
 Add behavior to individual objects and remove it later _while preserving the existing behavior_.
