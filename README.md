@@ -39,7 +39,7 @@ person.without_behaviors(Greeter)
 person.hello #=> NoMethodError
 ```
 
-### This does not alter the anncestry
+### This does not alter the ancestry
 
 When you add behaviors, the methods are copied to the `singleton_class` of your object. Later, if you ask the object if it is of that type, the answer will be false.
 

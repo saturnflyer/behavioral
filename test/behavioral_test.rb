@@ -17,6 +17,14 @@ describe Behavioral do
     end
     assert_match "undefined method `hello'", error.message
   end
+
+  it 'reverts added behaviors' do
+    person = Person.new('Jim')
+    person.with_behaviors(Greeter)
+    assert_equal "The Greeter Jim", person.name
+    person.without_behaviors(Greeter)
+    assert_equal "Jim", person.name
+  end
   
   it 'allows adding multiple behavior modules at once' do
     person = Person.new('Jim')
