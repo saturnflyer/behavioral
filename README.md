@@ -1,6 +1,6 @@
 # Behavioral
 
-[![Build Status](https://travis-ci.org/saturnflyer/behavioral.png?branch=master)](https://travis-ci.org/saturnflyer/behavioral)
+[![Build Status](https://github.com/saturnflyer/behavioral/actions/workflows/test.yml/badge.svg)](https://github.com/saturnflyer/behavioral/actions)
 [![Code Climate](https://codeclimate.com/github/saturnflyer/behavioral.png)](https://codeclimate.com/github/saturnflyer/behavioral)
 [![Coverage Status](https://coveralls.io/repos/saturnflyer/behavioral/badge.png)](https://coveralls.io/r/saturnflyer/behavioral)
 [![Gem Version](https://badge.fury.io/rb/behavioral.png)](http://badge.fury.io/rb/behavioral)
