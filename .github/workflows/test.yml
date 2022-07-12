@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6', '2.7', '3.0', '3.1']
+        ruby-version: ['2.6', '2.7', '3.0', '3.1', 'ruby-head']
 
     steps:
     - uses: actions/checkout@v3
@@ -31,6 +31,11 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Set TESTOPTS
+      run: "echo $TESTOPTS"
+      if: matrix.ruby-version == 'ruby-head'
+      env:
+        TESTOPTS: "-A test/allowed.yml"
     - name: Run tests
       run: bundle exec rake
     - name: Upload coverage results
